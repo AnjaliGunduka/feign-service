@@ -7,28 +7,27 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 public class ErrorResponse {
 
 	private String status;
-	private String message;
+	private String error;
 
-	public ErrorResponse(String status, String message) {
+	public ErrorResponse(String status, String error) {
 		super();
+		this.error = error;
 		this.status = status;
-		this.message = message;
+	}
+
+	public ErrorResponse() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getError() {
+		return error;
 	}
 
 	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
 
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
 
 }

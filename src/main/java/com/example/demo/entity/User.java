@@ -1,21 +1,38 @@
-package com.example.demo.request;
+package com.example.demo.entity;
 
-public class UserRequest {
+import java.time.LocalDateTime;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employees")
+public class User extends BaseEntity {
+
+	@Column(name = "first_name")
 	private String firstName;
 
+	@Column(name = "last_name")
 	private String lastName;
 
+	@Column(name = "phone_no")
 	private String phoneNo;
 
+	@Column(name = "email_id")
 	private String emailId;
-	
-	private String address;
-	
-	private String state;
 
-	private String country;
+	public User() {
+		super();
+	}
 
+	public User(String firstName, String lastName, String phoneNo, String emailId, LocalDateTime updatedAt) {
+		super(updatedAt);
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.phoneNo = phoneNo;
+		this.emailId = emailId;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -47,30 +64,6 @@ public class UserRequest {
 
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
-	}
-
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
 	}
 
 }

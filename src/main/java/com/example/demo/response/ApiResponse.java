@@ -1,15 +1,11 @@
-package com.example.demo.exception;
+package com.example.demo.response;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
-@JsonInclude(Include.NON_NULL)
-public class ErrorResponse {
-
+public class ApiResponse {
+	
 	private String status;
 	private String message;
 
-	public ErrorResponse(String status, String message) {
+	public ApiResponse(String status, String message) {
 		super();
 		this.status = status;
 		this.message = message;

@@ -1,18 +1,31 @@
-package com.example.demo.exception;
+package com.example.demo.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonInclude(Include.NON_NULL)
-public class ErrorResponse {
-
+public class Response {
+	
+	private long id;
 	private String status;
 	private String message;
+	
+	public Response() {
+		super();
+	}
 
-	public ErrorResponse(String status, String message) {
+	public Response(String status, String message) {
 		super();
 		this.status = status;
 		this.message = message;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getStatus() {
@@ -30,5 +43,7 @@ public class ErrorResponse {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+	
 
+	
 }

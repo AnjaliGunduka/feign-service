@@ -15,4 +15,10 @@ public class Constants {
 
 	public static final String DELETED_SUCCESSFULLY = "Employee Deleted Successfully";
 	public static final String EMPLOYEE_UPDATED_SUCCESSFULLY = "Employee updated successfully";
+	
+	public static final String FILE_TYPE_DOESNT_MATCH = "Please check the file type";
+	public static final String PROFILE_UPLOADED = "User profile has been added successfully.";
+
+
 }
+
